@@ -13,7 +13,8 @@ Mô tả :
   - Kiểm tra  : Tạo báo cáo giảng dạy của giảng viên ( chỉ cho người quản lý ), kiểm tra lịch đăng ký dạy kì mới
 Thực hành
 I. Tạo CSDL Quanly_giangvien trong hệ quản trị CSDL SQL Server
- 
+ ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/8aec4856-635d-45c5-9c47-a57ec5391dcc)
+
 -	Để tạo CSDL Quanly_giangvien : chuột phải vào “database” chọn “New database” => sau đó điền tên của CSDL vào Database name => click “OK” để xác nhận 
 II. Thiết kế bảng dữ liệu (Table)
 1.Tạo bảng dữ liệu “Giangvien”  lưu trữ thông tin giảng viên có cấu trúc như sau:
