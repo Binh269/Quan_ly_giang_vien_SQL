@@ -40,10 +40,9 @@ Thông tin cụ thể các bảng như sau  :
       -	Cột “id”  :đặt làm khóa chính (primary key) Kiểu dữ liệu ‘int’ + Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
       -	Cột “Tenkhoa”: để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
     2. Thêm dữ liệu vào bảng Khoa
-  
+	  Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào
      	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/fd05e5a6-a30d-4afe-a7e4-05c9fc79549d)
 
-      Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .
       Hoặc sử dụng lệnh để thêm dữ liệu vào bảng như sau .
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/6a53900f-03ec-4411-8df3-d562b9da4d18)
   
@@ -57,10 +56,10 @@ Thông tin cụ thể các bảng như sau  :
       -	Cột  “Makhoa”: để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự           đặc biệt.
       -	Cột “Ghichu” : để dữ liệu là ‘nvarchar(Max)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ không giới hạn độ dài, đáp ứng nhu cầu lưu trữ thông tin chi tiết.
      4. Thêm dữ liệu vào bảng Mon
-  
+  	Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/baa676a3-ae53-4254-9edb-a4a76337c111)
 
-      Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .Hoặc dùng lệnh sau để thêm :
+      Hoặc dùng lệnh sau để thêm :
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/7ac30f25-c52c-4e2e-acc8-d7a73e4acad4)
     5. Tạo bảng dữ liệu “Lop” lưu trữ danh mục lớp 
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
@@ -73,9 +72,10 @@ Thông tin cụ thể các bảng như sau  :
       -	Cột  “Tenlop” + “Phong”: để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
       -	Cột “Soluongsv” + “Tiet” + “Thu”: để dữ liệu là int cho phép lưu trữ số nguyên.
     6. Thêm dữ liệu vào bảng Lop
+       Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/f0169305-c31d-4ff2-8aa1-094623f9d1c7)
 
-        Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào . Hoặc dùng lệnh sau để thêm :
+       Hoặc dùng lệnh sau để thêm :
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/3b2e9f61-8c8e-4957-83b1-004888b0546c)
 
     7.Tạo bảng dữ liệu “Giangvien”  lưu trữ thông tin giảng viên có cấu trúc như sau:
@@ -90,9 +90,10 @@ Thông tin cụ thể các bảng như sau  :
       -	Cột “Diachi” : để dữ liệu là ‘nvarchar(Max)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ không giới hạn độ dài, đáp ứng nhu cầu lưu trữ thông tin chi tiết.
       -	Cột “So_cccd” : để kiểu dữ liệu là ‘VARCHAR(12)’ để lưu trữ 12 ký tự do số cccd là 12 số và để tránh mất mát thông tin khi có các giá trị 0 đứng đầu và vẫn lưu trữ cccd cũ là 9 số mà không bị xung đột.
     8. Thêm dữ liệu vào bảng Giangvien
+       Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/8c7cd01e-9a0f-4b73-ac53-9f08a94b6f1d)
 
-      Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào . Hoặc dùng lệnh sau để thêm :
+      Hoặc dùng lệnh sau để thêm :
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/26880776-8a33-47d5-8bab-7b1eca280181)
     9. Tạo bảng dữ liệu “Dangnhap” lưu trữ danh mục đăng nhập 
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
