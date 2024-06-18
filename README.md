@@ -175,9 +175,11 @@ Thông tin cụ thể các bảng như sau  :
   	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/7dd0aea8-0caa-4b96-96dd-321cc2862ccf)
   	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/e3e7f5d4-8af7-4f5e-be37-f7a6cc343279)
   
-   #19. Funciton tính tổng tín đăng ký kỳ mới của giảng viên
-  	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/d42f88c8-69b9-413a-89ae-ec6c5b1a7ef7)
-  	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/18be7a3f-a97a-49f3-9f4f-329bf771d3d0)
+   #19.Funciton tính tổng tín đăng ký kỳ mới của giảng viên
+  
+![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/d42f88c8-69b9-413a-89ae-ec6c5b1a7ef7)
+
+  ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/18be7a3f-a97a-49f3-9f4f-329bf771d3d0)
 
 
 
