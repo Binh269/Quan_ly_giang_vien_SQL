@@ -44,7 +44,7 @@ Thông tin cụ thể các bảng như sau  :
      	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/fd05e5a6-a30d-4afe-a7e4-05c9fc79549d)
 
       Hoặc sử dụng lệnh để thêm dữ liệu vào bảng như sau .
-      ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/6a53900f-03ec-4411-8df3-d562b9da4d18)
+      	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/6a53900f-03ec-4411-8df3-d562b9da4d18)
   
     3. Tạo bảng dữ liệu “Mon” lưu trữ thông tin các môn học Monhoc có cấu trúc như sau:
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
