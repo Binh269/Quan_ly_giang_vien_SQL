@@ -19,8 +19,8 @@ Thông tin cụ thể các bảng như sau  :
 - Lớp: Id ,  🔑Mã lớp , tên lớp , số lương sinh viên , tiết , thứ , phòng .
 - Khoa: Id , 🔑Mã khoa , tên khoa .
 - Đăng nhập: 🔑Id  , user , password .
-- Đăng ký dạy: 🔑Id, mã giảng viên , mã môn , mã lớp , học kỳ đăng ký .
-- Giao Dịch kho: 🔑Mã giao dịch, mã giảngviên, số lượng, ngày giao dịch, loại giao dịch.
+- Đăng ký dạy: 🔑Id , mã giảng viên , mã môn , mã lớp , học kỳ đăng ký .
+- Lịch dạy: 🔑Id , mã giảng viên, mã môn , mã lớp , tiết , phòng .
   #### I. Tạo CSDL Quanly_giangvien trong hệ quản trị CSDL SQL Server
    ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/8aec4856-635d-45c5-9c47-a57ec5391dcc)
   -	Để tạo CSDL Quanly_giangvien : chuột phải vào “database” chọn “New database” => sau đó điền tên của CSDL vào Database name => click “OK” để xác nhận 
@@ -42,7 +42,7 @@ Thông tin cụ thể các bảng như sau  :
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/201dd95f-8cf3-4545-9c7d-8d6a5a06f881)
       -	Cột “Mamon” : đặt làm khóa chính (primary key) là mã định danh duy nhất cho mỗi môn học, không liên quan trực tiếp đến bất kỳ thuộc tính nào khác của môn (như tên, phòng, v.v.) và độc lập về mặt ngữ nghĩa.
-        o	  Kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc biệt.
+        o	  Kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc 	biệt.
         o	Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống .
       -	Cột “id”  : Kiểu dữ liệu ‘int’ + ‘identify Specification’ là ‘yes’ để cột id này sẽ cho phép khóa chính tự tăng dần khi thêm dữ liệu vào và tự sắp xếp dữ liệu hiệu quả hơn . Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
       -	Cột  “Tenmon” : để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
@@ -70,7 +70,7 @@ Thông tin cụ thể các bảng như sau  :
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
 			![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/2a59cb60-a37d-4940-814e-1ada72d6d6de)
       -	Cột “Magv” : đặt làm khóa chính (primary key) là mã định danh duy nhất cho mỗi khoa, không liên quan trực tiếp đến bất kỳ thuộc tính nào khác của lớp (như tên, v.v.) và độc lập về mặt ngữ nghĩa.
-        o	  Kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc biệt.
+        o	  Kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc 	biệt.
         o	Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống .
       -	Cột “id”  : Kiểu dữ liệu ‘int’ + ‘identify Specification’ là ‘yes’ để cột id này sẽ cho phép khóa chính tự tăng dần khi thêm dữ liệu vào và tự sắp xếp dữ liệu hiệu quả hơn . Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
       -	Cột "Makhoagv": để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng                     và các ký tự đặc biệt.
