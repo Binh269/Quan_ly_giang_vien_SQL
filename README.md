@@ -32,14 +32,14 @@ Thông tin cụ thể các bảng như sau  :
 ![Screenshot 2024-06-18 114652](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/9456f3df-4d39-406c-93a7-969bbeb06ba9)
 
 
-     1. Tạo bảng dữ liệu “Khoa” lưu trữ danh mục khoa
+     #1. Tạo bảng dữ liệu “Khoa” lưu trữ danh mục khoa
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
         ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/8dd5378d-641f-4ec5-bc1d-c8c279738f28)
         
       -	Cột “Makhoa” : Kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc biệt.
       -	Cột “id”  :đặt làm khóa chính (primary key) Kiểu dữ liệu ‘int’ + Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
       -	Cột “Tenkhoa”: để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
-    2. Thêm dữ liệu vào bảng Khoa
+    b). Thêm dữ liệu vào bảng Khoa
 	  Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào
      	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/fd05e5a6-a30d-4afe-a7e4-05c9fc79549d)
 
