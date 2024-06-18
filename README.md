@@ -60,7 +60,8 @@ Thông tin cụ thể các bảng như sau  :
 ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/baa676a3-ae53-4254-9edb-a4a76337c111)
 
       Hoặc dùng lệnh sau để thêm :
-      ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/7ac30f25-c52c-4e2e-acc8-d7a73e4acad4)
+![Screenshot 2024-06-18 065515](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/8f413888-9a36-4e5d-a63f-808f9d43818b)
+
     5. Tạo bảng dữ liệu “Lop” lưu trữ danh mục lớp 
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
 ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/02e7c371-481d-4faf-acb0-6ef92cd410a3)
@@ -94,7 +95,8 @@ Thông tin cụ thể các bảng như sau  :
 ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/8c7cd01e-9a0f-4b73-ac53-9f08a94b6f1d)
 
       Hoặc dùng lệnh sau để thêm :
-      ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/26880776-8a33-47d5-8bab-7b1eca280181)
+![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/af3ca2bf-7f58-4825-85a1-cc9f22663918)
+
     9. Tạo bảng dữ liệu “Dangnhap” lưu trữ danh mục đăng nhập 
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
 ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/0725a824-bde1-4ba0-bdc0-4bf0e20d8c40)
@@ -122,7 +124,8 @@ Thông tin cụ thể các bảng như sau  :
 	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/e0aedf61-198f-45b6-b062-d8c10b351808)
 
       Test kiểm tra nếu giảng viên đăng ký khác khoa
-      ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/b0e47638-6c14-45d3-a423-be8909ff17ce)
+  ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/37d324fa-c511-475d-ace2-96963cdd3731)
+
   
 	Sau khi đã có trgger để lọc dữ liệu đầu vào cho chuẩn xác thì em sẽ tự thêm dữ liệu để phù hợp .
 	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/e6501e97-09f6-4fc5-b67b-2a22f891a954)
