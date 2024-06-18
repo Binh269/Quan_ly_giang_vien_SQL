@@ -20,11 +20,11 @@ Thông tin cụ thể các bảng như sau  :
 - Đăng nhập: 🔑Id  , [user] , password .
 - Đăng ký dạy: 🔑Id, mã giảng viên , mã môn , mã lớp , học kỳ đăng ký .
 - Giao Dịch kho: 🔑Mã giao dịch, mã giảngviên, số lượng, ngày giao dịch, loại giao dịch.
-  I. Tạo CSDL Quanly_giangvien trong hệ quản trị CSDL SQL Server
+  #### I. Tạo CSDL Quanly_giangvien trong hệ quản trị CSDL SQL Server
    ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/8aec4856-635d-45c5-9c47-a57ec5391dcc)
   -	Để tạo CSDL Quanly_giangvien : chuột phải vào “database” chọn “New database” => sau đó điền tên của CSDL vào Database name => click “OK” để xác nhận 
-  II. Thiết kế bảng dữ liệu (Table)
-    1. Tạo bảng dữ liệu “Khoa” lưu trữ danh mục khoa
+  #### II. Thiết kế bảng dữ liệu (Table)
+   #####  1. Tạo bảng dữ liệu “Khoa” lưu trữ danh mục khoa
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
         ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/8dd5378d-641f-4ec5-bc1d-c8c279738f28)
       -	Cột “Makhoa” : đặt làm khóa chính (primary key) là mã định danh duy nhất cho mỗi khoa, không liên quan trực tiếp đến bất kỳ thuộc tính nào khác của lớp (như tên, v.v.) và độc lập về mặt ngữ nghĩa.
@@ -32,14 +32,14 @@ Thông tin cụ thể các bảng như sau  :
         o	Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống .
       -	Cột “id”  : Kiểu dữ liệu ‘int’ + ‘identify Specification’ là ‘yes’ để cột id này sẽ cho phép khóa chính tự tăng dần khi thêm dữ liệu vào và tự sắp xếp dữ liệu hiệu quả hơn . Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
       -	Cột “Tenkhoa”: để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
-    2. Thêm dữ liệu vào bảng Khoa
+  #####  2. Thêm dữ liệu vào bảng Khoa
      	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/fd05e5a6-a30d-4afe-a7e4-05c9fc79549d)
       Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .
       Hoặc sử dụng lệnh để thêm dữ liệu vào bảng như sau .
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/6a53900f-03ec-4411-8df3-d562b9da4d18)
-    3. Tạo bảng dữ liệu “Mon” lưu trữ thông tin các môn học Monhoc có cấu trúc như sau:
+  #####  3. Tạo bảng dữ liệu “Mon” lưu trữ thông tin các môn học Monhoc có cấu trúc như sau:
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
-       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/b829b815-8e54-4d38-b918-d35633d84841)
+       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/201dd95f-8cf3-4545-9c7d-8d6a5a06f881)
       -	Cột “Mamon” : đặt làm khóa chính (primary key) là mã định danh duy nhất cho mỗi môn học, không liên quan trực tiếp đến bất kỳ thuộc tính nào khác của môn (như tên, phòng, v.v.) và độc lập về mặt ngữ nghĩa.
         o	  Kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc biệt.
         o	Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống .
@@ -47,9 +47,10 @@ Thông tin cụ thể các bảng như sau  :
       -	Cột  “Tenmon” : để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
       -	Cột  “Makhoa”: để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự           đặc biệt.
       -	Cột “Ghichu” : để dữ liệu là ‘nvarchar(Max)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ không giới hạn độ dài, đáp ứng nhu cầu lưu trữ thông tin chi tiết.
-    4. Thêm dữ liệu vào bảng Mon
-       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/bae86c51-6303-489d-bdb5-5e5698d0df65)
-      Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .
+    ##### 4. Thêm dữ liệu vào bảng Mon
+       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/baa676a3-ae53-4254-9edb-a4a76337c111)
+      Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .Hoặc dùng lệnh sau để thêm :
+      ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/7ac30f25-c52c-4e2e-acc8-d7a73e4acad4)
     5. Tạo bảng dữ liệu “Lop” lưu trữ danh mục lớp 
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/02e7c371-481d-4faf-acb0-6ef92cd410a3)
@@ -62,7 +63,8 @@ Thông tin cụ thể các bảng như sau  :
       -	Cột “Soluongsv” + “Tiet” + “Thu”: để dữ liệu là int cho phép lưu trữ số nguyên.
     6. Thêm dữ liệu vào bảng Lop
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/f0169305-c31d-4ff2-8aa1-094623f9d1c7)
-        Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .
+        Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào . Hoặc dùng lệnh sau để thêm :
+       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/3b2e9f61-8c8e-4957-83b1-004888b0546c)
     7.Tạo bảng dữ liệu “Giangvien”  lưu trữ thông tin giảng viên có cấu trúc như sau:
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/fbc3126a-e1b8-4d1a-8ecb-ecb4a42cd427)
