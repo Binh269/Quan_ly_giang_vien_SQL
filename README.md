@@ -102,7 +102,8 @@ Thông tin cụ thể các bảng như sau  :
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/5f68f584-d9c0-4fd0-ad69-45f08ef4f33c)
       - Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .
       - Do em muốn là giảng viên khoa nào thì chỉ được dạy môn của khoa đó và lớp khoa nào thì mới đăng ký được môn của khoa đó ( do không kết hợp với đăng ký môn học của sinh viên nên lớp của từng môn cụ thể của các khoa em điền ngẫu nhiên ạ) và khi giảng viên đăng kí         môn dạy và lớp dạy thì lịch học không được trùng nhau . Do đó em sẽ tạo ra 1 trigger tên là kiemtra_dangkyday
-	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/6284da53-4666-4ebe-ac6a-3cdb8082a16a)
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/968ee3e9-0766-4fc0-a276-ea75126a6ca6)
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/e0aedf61-198f-45b6-b062-d8c10b351808)
       Test kiểm tra nếu giảng viên đăng ký khác khoa
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/b0e47638-6c14-45d3-a423-be8909ff17ce)
 	Sau khi đã có trgger để lọc dữ liệu đầu vào cho chuẩn xác thì em sẽ tự thêm dữ liệu để phù hợp .
@@ -119,7 +120,9 @@ Thông tin cụ thể các bảng như sau  :
       -	Cột “Ngay” : để dữ liệu là ‘date’ cho phép thao tác và truy vấn dữ liệu liên quan đến ngày tháng năm một cách dễ dàng và chính xác.
     15. Thêm dữ liệu vào bảng Lichday
         Để phù hợp với mô tả ở trên em đã viết thêm 1 trigger update_lichday để khi có sự chèn hay cập nhật trong bảng dangkyday khi giảng viên đăng ký môn thì bảng lịch học sẽ tự động cập nhật.
-        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/01b1957a-d2eb-4a12-b8ad-14b47f92c62a)
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/7b82628b-2406-4a74-b217-428d95a290ec)
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/c91c594c-31ce-4b26-88dd-9b175039b832)
+
     
 
 
