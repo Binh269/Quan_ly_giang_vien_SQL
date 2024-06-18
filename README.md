@@ -146,5 +146,25 @@ Thông tin cụ thể các bảng như sau  :
     16. Tạo FUntion tìm kiếm những giảng viên chưa đăng ký dạy kỳ mới
         ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/84b5aa98-1e11-4c1f-8e47-10dd7a1d5c41)
 
+    17. Tạo cursor để phân quyền tài khoản
+        id là 1 thì cho xem , sửa tất cả tài khoản mạt khẩu.
+        id là 2, 3 thì cho xem , sửa những tài khoản mật khẩu từ 3 trở đi.
+        các id khác không xem ,sửa được .
+        - Trước hết cần tạo một bảng 
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/54c56566-3681-47c2-885f-10cb7f6f1514)
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/0e7d5bbe-891e-4ad1-9bfc-baa6f7b6bd6e)
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/cef281fe-b148-403b-8963-381ec19bc9be)
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/f1ed3b76-472a-4ab0-afe2-593e8d1ac8aa)
+
+	Test kết quả :
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/99f751c6-ecf0-4010-8fa7-5f8f0cad509a)
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/a87b9b8a-34aa-406a-95b3-b8769418981b)
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/88697136-2e24-4194-ae7b-46dbe709d866)
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/185df343-4afd-438b-90ce-62fccd22bee6)
+
+
+
+
+
 
 
