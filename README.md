@@ -170,6 +170,10 @@ Thông tin cụ thể các bảng như sau  :
 	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/88697136-2e24-4194-ae7b-46dbe709d866)
 	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/185df343-4afd-438b-90ce-62fccd22bee6)
 
+   #18. Thủ tục cập nhật thông tin giảng viên
+  	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/7dd0aea8-0caa-4b96-96dd-321cc2862ccf)
+  	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/e3e7f5d4-8af7-4f5e-be37-f7a6cc343279)
+
 
 
 
