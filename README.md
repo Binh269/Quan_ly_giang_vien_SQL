@@ -25,6 +25,8 @@ Thông tin cụ thể các bảng như sau  :
    ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/8aec4856-635d-45c5-9c47-a57ec5391dcc)
   -	Để tạo CSDL Quanly_giangvien : chuột phải vào “database” chọn “New database” => sau đó điền tên của CSDL vào Database name => click “OK” để xác nhận 
   #### II. Thiết kế bảng dữ liệu (Table)
+  ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/79137894-853a-41a2-9fb2-cc038142c015)
+
      1. Tạo bảng dữ liệu “Khoa” lưu trữ danh mục khoa
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
         ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/8dd5378d-641f-4ec5-bc1d-c8c279738f28)
