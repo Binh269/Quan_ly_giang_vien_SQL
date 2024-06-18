@@ -67,27 +67,29 @@ Thông tin cụ thể các bảng như sau  :
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/3b2e9f61-8c8e-4957-83b1-004888b0546c)
     7.Tạo bảng dữ liệu “Giangvien”  lưu trữ thông tin giảng viên có cấu trúc như sau:
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
-       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/fbc3126a-e1b8-4d1a-8ecb-ecb4a42cd427)
-      -	Cột “id”  : đặt làm khóa chính (primary key) để id không phụ thuộc vào bất kỳ thông tin nào (ví dụ như thông tin giáo viên), điều này làm giảm rủi ro khi cần thay đổi thông tin , việc bảo trì và tính toàn vẹn dữ liệu.
-        o	  Kiểu dữ liệu ‘int’ + ‘identify Specification’ là ‘yes’ để cột id này sẽ cho phép khóa chính tự tăng dần khi thêm dữ liệu vào và tự sắp xếp dữ liệu hiệu quả hơn . 
-        o	Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
-      -	Cột  “Magv” + "Makhoagv": để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng           và các ký tự đặc biệt.
+			![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/2a59cb60-a37d-4940-814e-1ada72d6d6de)
+      -	Cột “Magv” : đặt làm khóa chính (primary key) là mã định danh duy nhất cho mỗi khoa, không liên quan trực tiếp đến bất kỳ thuộc tính nào khác của lớp (như tên, v.v.) và độc lập về mặt ngữ nghĩa.
+        o	  Kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc biệt.
+        o	Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống .
+      -	Cột “id”  : Kiểu dữ liệu ‘int’ + ‘identify Specification’ là ‘yes’ để cột id này sẽ cho phép khóa chính tự tăng dần khi thêm dữ liệu vào và tự sắp xếp dữ liệu hiệu quả hơn . Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
+      -	Cột "Makhoagv": để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng                     và các ký tự đặc biệt.
       -	Cột “Hoten” + “Gioitinh” + “Dantoc” : để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
       -	Cột “Ngaysinh” : để dữ liệu là ‘date’ cho phép thao tác và truy vấn dữ liệu liên quan đến ngày tháng năm một cách dễ dàng và chính xác.
       -	Cột “Diachi” : để dữ liệu là ‘nvarchar(Max)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ không giới hạn độ dài, đáp ứng nhu cầu lưu trữ thông tin chi tiết.
       -	Cột “So_cccd” : để kiểu dữ liệu là ‘VARCHAR(12)’ để lưu trữ 12 ký tự do số cccd là 12 số và để tránh mất mát thông tin khi có các giá trị 0 đứng đầu và vẫn lưu trữ cccd cũ là 9 số mà không bị xung đột.
     8. Thêm dữ liệu vào bảng Giangvien
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/8c7cd01e-9a0f-4b73-ac53-9f08a94b6f1d)
-      Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .
-    9. Tạo bảng dữ liệu “Dangnhap” lưu trữ danh mục đăng nhập 
+      Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào . Hoặc dùng lệnh sau để thêm :
+      ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/26880776-8a33-47d5-8bab-7b1eca280181)
+    10. Tạo bảng dữ liệu “Dangnhap” lưu trữ danh mục đăng nhập 
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/0725a824-bde1-4ba0-bdc0-4bf0e20d8c40)
       -	Cột “id”  : đặt làm khóa chính (primary key) để id không phụ thuộc vào bất kỳ thông tin nào (ví dụ như thông tin giáo viên), điều này làm giảm rủi ro khi cần thay đổi thông tin , việc bảo trì và tính toàn vẹn dữ liệu.
       -	Cột  “user” + “password” để kiểu dữ liệu là ‘VARCHAR(64)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 64 ký tự, bao gồm cả ký tự trắng và         các ký tự đặc biệt.
-    10. Thêm dữ liệu vào bảng Dangnhap
+    11. Thêm dữ liệu vào bảng Dangnhap
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/b4eedc94-2abe-4416-8df1-fa3e4f977bdb)
       Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .
-    11. Tạo bảng dữ liệu “Dangkyday” lưu trữ danh mục đăng ký dạy 
+    12. Tạo bảng dữ liệu “Dangkyday” lưu trữ danh mục đăng ký dạy 
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/ddbc7e8f-40f4-4f2a-9bcc-02bb4d21bbd8)
       -	Cột “id”  : đặt làm khóa chính (primary key) để id không phụ thuộc vào bất kỳ thông tin nào (ví dụ như thông tin giáo viên), điều này làm giảm rủi ro khi cần thay đổi thông tin , việc bảo trì và tính toàn vẹn dữ liệu.
@@ -95,14 +97,14 @@ Thông tin cụ thể các bảng như sau  :
         o	Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
       -	Cột  “Magv” + “Mamon” + “Malop”: để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự         trắng và các ký tự đặc biệt.
       -	Cột “Hockydk” : để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
-    12. Thêm dữ liệu vào bảng Dangkyday
+    13. Thêm dữ liệu vào bảng Dangkyday
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/5f68f584-d9c0-4fd0-ad69-45f08ef4f33c)
       Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .
       Do em muốn là giảng viên khoa nào thì chỉ được dạy môn của khoa đó và lớp khoa nào thì mới đăng ký được môn của khoa đó ( do không kết hợp với đăng ký môn học của sinh viên nên lớp của từng môn cụ thể của các khoa em điền ngẫu nhiên ạ) và khi giảng viên đăng kí         môn dạy và lớp dạy thì lịch học không được trùng nhau . Do đó em sẽ tạo ra 1 trigger tên là kiemtra_dangkyday
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/71e40420-c81c-4601-abec-40605cf7ce03)
       Test kiểm tra nếu giảng viên đăng ký khác khoa
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/b0e47638-6c14-45d3-a423-be8909ff17ce)
-    13. Tạo bảng dữ liệu “Lichday” lưu trữ danh mục lịch dạy học 
+    14. Tạo bảng dữ liệu “Lichday” lưu trữ danh mục lịch dạy học 
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/2ecf91a4-2d7e-4640-a0ae-bb8faa6355b3)
       -	Cột “id”  : đặt làm khóa chính (primary key) để id không phụ thuộc vào bất kỳ thông tin nào (ví dụ như thông tin giáo viên), điều này làm giảm rủi ro khi cần thay đổi thông tin , việc bảo trì và tính toàn vẹn dữ liệu.
@@ -112,7 +114,7 @@ Thông tin cụ thể các bảng như sau  :
       -	Cột “Phong” : để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
       -	Cột “Tiet”: để dữ liệu là int cho phép lưu trữ số nguyên.
       -	Cột “Ngay” : để dữ liệu là ‘date’ cho phép thao tác và truy vấn dữ liệu liên quan đến ngày tháng năm một cách dễ dàng và chính xác.
-    14. Thêm dữ liệu vào bảng Lichday
+    15. Thêm dữ liệu vào bảng Lichday
      
     Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .
 
