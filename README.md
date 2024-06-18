@@ -54,7 +54,7 @@ Thông tin cụ thể các bảng như sau  :
       -	Cột “Mamon” : Kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc biệt.
       -	Cột “id”  :đặt làm khóa chính (primary key) Kiểu dữ liệu ‘int’ + Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống  
       -	Cột  “Tenmon” : để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
-      -	Cột  “Makhoa”: để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự           đặc biệt.
+      -	Cột  “Makhoa”: để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc biệt.
       -	Cột “Ghichu” : để dữ liệu là ‘nvarchar(Max)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ không giới hạn độ dài, đáp ứng nhu cầu lưu trữ thông tin chi tiết.
      #4. Thêm dữ liệu vào bảng Mon
   	Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào
@@ -70,7 +70,7 @@ Thông tin cụ thể các bảng như sau  :
       Bảng này không đặt “Malop” làm khóa chính vì em muốn thêm dữ liệu để mỗi mã lớp có thể có nhiều tiết khác nhau và nhiều thứ khác nhau
       -	Cột “id”  : đặt làm khóa chính (primary key) để id không phụ thuộc vào bất kỳ thông tin nào (ví dụ như thông tin giáo viên), điều này làm giảm rủi ro khi cần thay đổi thông tin , việc bảo trì và tính toàn vẹn dữ liệu.
         o	  Kiểu dữ liệu ‘int’+ Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
-      -	Cột  “Malop”: để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự         đặc biệt.
+      -	Cột  “Malop”: để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc biệt.
       -	Cột  “Tenlop” + “Phong”: để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
       -	Cột “Soluongsv” + “Tiet” + “Thu”: để dữ liệu là int cho phép lưu trữ số nguyên.
     #6. Thêm dữ liệu vào bảng Lop
@@ -86,7 +86,7 @@ Thông tin cụ thể các bảng như sau  :
   
       -	Cột “Magv” : Kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc biệt.
       -	Cột “id”  :đặt làm khóa chính (primary key) Kiểu dữ liệu ‘int’ + Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
-      -	Cột "Makhoagv": để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng                     và các ký tự đặc biệt.
+      -	Cột "Makhoagv": để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc biệt.
       -	Cột “Hoten” + “Gioitinh” + “Dantoc” : để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
       -	Cột “Ngaysinh” : để dữ liệu là ‘date’ cho phép thao tác và truy vấn dữ liệu liên quan đến ngày tháng năm một cách dễ dàng và chính xác.
       -	Cột “Diachi” : để dữ liệu là ‘nvarchar(Max)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ không giới hạn độ dài, đáp ứng nhu cầu lưu trữ thông tin chi tiết.
@@ -103,7 +103,7 @@ Thông tin cụ thể các bảng như sau  :
 	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/0725a824-bde1-4ba0-bdc0-4bf0e20d8c40)
 
       -	Cột “id”  : đặt làm khóa chính (primary key) để id không phụ thuộc vào bất kỳ thông tin nào (ví dụ như thông tin giáo viên), điều này làm giảm rủi ro khi cần thay đổi thông tin , việc bảo trì và tính toàn vẹn dữ liệu.
-      -	Cột  “user” + “password” để kiểu dữ liệu là ‘VARCHAR(64)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 64 ký tự, bao gồm cả ký tự trắng và         các ký tự đặc biệt.
+      -	Cột  “user” + “password” để kiểu dữ liệu là ‘VARCHAR(64)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 64 ký tự, bao gồm cả ký tự trắng và các ký tự đặc biệt.
     #10. Thêm dữ liệu vào bảng Dangnhap
 	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/b4eedc94-2abe-4416-8df1-fa3e4f977bdb)
 
@@ -114,13 +114,13 @@ Thông tin cụ thể các bảng như sau  :
 
       -	Cột “id”  : đặt làm khóa chính (primary key) để id không phụ thuộc vào bất kỳ thông tin nào (ví dụ như thông tin giáo viên), điều này làm giảm rủi ro khi cần thay đổi thông tin , việc bảo trì và tính toàn vẹn dữ liệu.
         o Kiểu dữ liệu ‘int’ + Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
-      -	Cột  “Magv” + “Mamon” + “Malop”: để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự         trắng và các ký tự đặc biệt.
+      -	Cột  “Magv” + “Mamon” + “Malop”: để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc biệt.
       -	Cột “Hockydk” : để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
     #12. Thêm dữ liệu vào bảng Dangkyday
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/5f68f584-d9c0-4fd0-ad69-45f08ef4f33c)
 
       - Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .
-      - Do em muốn là giảng viên khoa nào thì chỉ được dạy môn của khoa đó và lớp khoa nào thì mới đăng ký được môn của khoa đó ( do không kết hợp với đăng ký môn học của sinh viên nên lớp của từng môn cụ thể của các khoa em điền ngẫu nhiên ạ) và khi giảng viên đăng kí         môn dạy và lớp dạy thì lịch học không được trùng nhau .
+      - Do em muốn là giảng viên khoa nào thì chỉ được dạy môn của khoa đó và lớp khoa nào thì mới đăng ký được môn của khoa đó ( do không kết hợp với đăng ký môn học của sinh viên nên lớp của từng môn cụ thể của các khoa em điền ngẫu nhiên ạ) và khi giảng viên đăng kí môn dạy và lớp dạy thì lịch học không được trùng nhau .
   	* Do đó em sẽ tạo ra 1 trigger tên là kiemtra_dangkyday
 	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/968ee3e9-0766-4fc0-a276-ea75126a6ca6)
 	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/e0aedf61-198f-45b6-b062-d8c10b351808)
@@ -138,7 +138,7 @@ Thông tin cụ thể các bảng như sau  :
 
       -	Cột “id”  : đặt làm khóa chính (primary key) để id không phụ thuộc vào bất kỳ thông tin nào (ví dụ như thông tin giáo viên), điều này làm giảm rủi ro khi cần thay đổi thông tin , việc bảo trì và tính toàn vẹn dữ liệu.
         o Kiểu dữ liệu ‘int’ + Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
-      -	Cột  “Magv” + “Mamon” để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và           các ký tự đặc biệt.
+      -	Cột  “Magv” + “Mamon” để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và các ký tự đặc biệt.
       -	Cột “Phong” : để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
       -	Cột “Tiet”: để dữ liệu là int cho phép lưu trữ số nguyên.
       -	Cột “Ngay” : để dữ liệu là ‘date’ cho phép thao tác và truy vấn dữ liệu liên quan đến ngày tháng năm một cách dễ dàng và chính xác.
@@ -151,13 +151,14 @@ Thông tin cụ thể các bảng như sau  :
     #15. Tạo thủ tục tìm kiếm thông tin giảng viên bằng một trong các thông tin : mã giảng viên , tên giảng viên , mã khoa , tên khoa
         ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/4e3dc408-1356-4681-807a-c7d29bb7f730)
 
-    #16. Tạo FUntion tìm kiếm những giảng viên chưa đăng ký dạy kỳ mới
+    #16. Tạo Function tìm kiếm những giảng viên chưa đăng ký dạy kỳ mới
         ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/84b5aa98-1e11-4c1f-8e47-10dd7a1d5c41)
 
     #17. Tạo cursor để phân quyền tài khoản
-        id là 1 thì cho xem , sửa tất cả tài khoản mật khẩu.
-        id là 2, 3 thì cho xem , sửa những tài khoản mật khẩu từ 3 trở đi.
-        các id khác không xem ,sửa được .
+        - id là 1 thì cho xem , sửa tất cả tài khoản mật khẩu.
+        - id là 2, 3 thì cho xem , sửa những tài khoản mật khẩu từ 3 trở đi.
+        - các id khác không xem ,sửa được .
+  
         - Trước hết cần tạo một bảng 
 	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/54c56566-3681-47c2-885f-10cb7f6f1514)
 	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/0e7d5bbe-891e-4ad1-9bfc-baa6f7b6bd6e)
