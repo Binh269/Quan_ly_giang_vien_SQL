@@ -122,8 +122,8 @@ Thông tin cụ thể các bảng như sau  :
         Để phù hợp với mô tả ở trên em đã viết thêm 1 trigger update_lichday để khi có sự chèn hay cập nhật trong bảng dangkyday khi giảng viên đăng ký môn thì bảng lịch học sẽ tự động cập nhật.
 	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/7b82628b-2406-4a74-b217-428d95a290ec)
 	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/c91c594c-31ce-4b26-88dd-9b175039b832)
-
-    
+    16. Tạo thủ tục tìm kiếm thông tin giảng viên bằng một trong các thông tin : mã giảng viên , tên giảng viên , mã khoa , tên khoa
+        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/4e3dc408-1356-4681-807a-c7d29bb7f730)
 
 
 
