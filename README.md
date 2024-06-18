@@ -14,7 +14,7 @@ Lớp : K57KMT
   - Khi đăng ký kỳ dạy mới thì giảng viên đăng ký theo khoa của giảng viên và lịch dạy không được trùng ( khoa cảu giảng viên giống khoa của môn dạy ) và lịch dạy sẽ tự cập nhật , thay đổi theo môn đăng ký của giảng viên
 ### Thực hành
 Thông tin cụ thể các bảng như sau  :
-- Giảng viên: 🔑Id , mã giảng viên, tên giảng viên , họ tên , ngày sinh , giới tính , địa chỉ , số căn cước công dân , khoa .
+- Giảng viên: 🔑Id , mã giảng viên, họ tên , ngày sinh , giới tính , địa chỉ , số căn cước công dân , khoa .
 - Môn: Id ,  🔑Mã môn, tên môn , số tín chỉ , khoa , ghi chú .
 - Lớp: Id ,  🔑Mã lớp , tên lớp , số lương sinh viên , tiết , thứ , phòng .
 - Khoa: Id , 🔑Mã khoa , tên khoa .
