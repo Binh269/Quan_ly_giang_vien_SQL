@@ -129,7 +129,7 @@ Thông tin cụ thể các bảng như sau  :
   ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/37d324fa-c511-475d-ace2-96963cdd3731)
 
   
-	Sau khi đã có trgger để lọc dữ liệu đầu vào cho chuẩn xác thì em sẽ tự thêm dữ liệu để phù hợp .
+	Sau khi đã có trigger để lọc dữ liệu đầu vào cho chuẩn xác thì em sẽ tự thêm dữ liệu để phù hợp .
 	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/e6501e97-09f6-4fc5-b67b-2a22f891a954)
 
     #13. Tạo bảng dữ liệu “Lichday” lưu trữ danh mục lịch dạy học 
@@ -137,7 +137,7 @@ Thông tin cụ thể các bảng như sau  :
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/2ecf91a4-2d7e-4640-a0ae-bb8faa6355b3)
 
       -	Cột “id”  : đặt làm khóa chính (primary key) để id không phụ thuộc vào bất kỳ thông tin nào (ví dụ như thông tin giáo viên), điều này làm giảm rủi ro khi cần thay đổi thông tin , việc bảo trì và tính toàn vẹn dữ liệu.
-        o	  Kiểu dữ liệu ‘int’ + Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
+        o Kiểu dữ liệu ‘int’ + Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
       -	Cột  “Magv” + “Mamon” để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự trắng và           các ký tự đặc biệt.
       -	Cột “Phong” : để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
       -	Cột “Tiet”: để dữ liệu là int cho phép lưu trữ số nguyên.
@@ -155,7 +155,7 @@ Thông tin cụ thể các bảng như sau  :
         ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/84b5aa98-1e11-4c1f-8e47-10dd7a1d5c41)
 
     #17. Tạo cursor để phân quyền tài khoản
-        id là 1 thì cho xem , sửa tất cả tài khoản mạt khẩu.
+        id là 1 thì cho xem , sửa tất cả tài khoản mật khẩu.
         id là 2, 3 thì cho xem , sửa những tài khoản mật khẩu từ 3 trở đi.
         các id khác không xem ,sửa được .
         - Trước hết cần tạo một bảng 
