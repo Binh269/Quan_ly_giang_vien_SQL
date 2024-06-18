@@ -11,13 +11,14 @@ Lớp : K57KMT
   - Quản lý lịch dạy : thêm , sửa, xóa lịch , phòng , giảng viên ( chỉ cho người quản lý ) ; liệt kê phòng dạy , ngày , giảng viên 
   - Quản lý buổi dạy của giảng viên : liệt kê môn dạy của giảng viên ; kiểm tra giảng viên có đi dạy hay không ( chỉ cho người quản lý )
   - Kiểm tra  : Tạo báo cáo giảng dạy của giảng viên , tìm kiếm giảng viên ( chỉ cho người quản lý ), kiểm tra lịch đăng ký dạy kì mới
+  - Khi đăng ký kỳ dạy mới thì giảng viên đăng ký theo khoa của giảng viên và lịch dạy không được trùng ( khoa cảu giảng viên giống khoa của môn dạy ) và lịch dạy sẽ tự cập nhật , thay đổi theo môn đăng ký của giảng viên
 ### Thực hành
 Thông tin cụ thể các bảng như sau  :
 - Giảng viên: 🔑Id , mã giảng viên, tên giảng viên , họ tên , ngày sinh , giới tính , địa chỉ , số căn cước công dân , khoa .
 - Môn: Id ,  🔑Mã môn, tên môn , số tín chỉ , khoa , ghi chú .
 - Lớp: Id ,  🔑Mã lớp , tên lớp , số lương sinh viên , tiết , thứ , phòng .
 - Khoa: Id , 🔑Mã khoa , tên khoa .
-- Đăng nhập: 🔑Id  , [user] , password .
+- Đăng nhập: 🔑Id  , user , password .
 - Đăng ký dạy: 🔑Id, mã giảng viên , mã môn , mã lớp , học kỳ đăng ký .
 - Giao Dịch kho: 🔑Mã giao dịch, mã giảngviên, số lượng, ngày giao dịch, loại giao dịch.
   #### I. Tạo CSDL Quanly_giangvien trong hệ quản trị CSDL SQL Server
@@ -93,18 +94,20 @@ Thông tin cụ thể các bảng như sau  :
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/ddbc7e8f-40f4-4f2a-9bcc-02bb4d21bbd8)
       -	Cột “id”  : đặt làm khóa chính (primary key) để id không phụ thuộc vào bất kỳ thông tin nào (ví dụ như thông tin giáo viên), điều này làm giảm rủi ro khi cần thay đổi thông tin , việc bảo trì và tính toàn vẹn dữ liệu.
-        o	  Kiểu dữ liệu ‘int’ + ‘identify Specification’ là ‘yes’ để cột id này sẽ cho phép khóa chính tự tăng dần khi thêm dữ liệu vào và tự sắp xếp dữ liệu hiệu quả hơn . 
-        o	Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
+        o Kiểu dữ liệu ‘int’ + ‘identify Specification’ là ‘yes’ để cột id này sẽ cho phép khóa chính tự tăng dần khi thêm dữ liệu vào và tự sắp xếp dữ liệu hiệu quả hơn . 
+        o Không cho phép ‘null’ vì để id luôn là một giá trị duy nhất và không được phép trống 
       -	Cột  “Magv” + “Mamon” + “Malop”: để kiểu dữ liệu là ‘VARCHAR(20)’ để tối ưu bộ nhớ vì khi dùng bao nhiêu ký tự thực tế thì bộ nhớ chỉ cấp phát từng ấy và thêm 1 byte để lưu trữ độ dài chuỗi . Cho phép lưu trữ các mã có độ dài lên đến 20 ký tự, bao gồm cả ký tự         trắng và các ký tự đặc biệt.
       -	Cột “Hockydk” : để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
     13. Thêm dữ liệu vào bảng Dangkyday
        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/5f68f584-d9c0-4fd0-ad69-45f08ef4f33c)
-      Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .
-      Do em muốn là giảng viên khoa nào thì chỉ được dạy môn của khoa đó và lớp khoa nào thì mới đăng ký được môn của khoa đó ( do không kết hợp với đăng ký môn học của sinh viên nên lớp của từng môn cụ thể của các khoa em điền ngẫu nhiên ạ) và khi giảng viên đăng kí         môn dạy và lớp dạy thì lịch học không được trùng nhau . Do đó em sẽ tạo ra 1 trigger tên là kiemtra_dangkyday
-      ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/71e40420-c81c-4601-abec-40605cf7ce03)
+      - Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .
+      - Do em muốn là giảng viên khoa nào thì chỉ được dạy môn của khoa đó và lớp khoa nào thì mới đăng ký được môn của khoa đó ( do không kết hợp với đăng ký môn học của sinh viên nên lớp của từng môn cụ thể của các khoa em điền ngẫu nhiên ạ) và khi giảng viên đăng kí         môn dạy và lớp dạy thì lịch học không được trùng nhau . Do đó em sẽ tạo ra 1 trigger tên là kiemtra_dangkyday
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/6284da53-4666-4ebe-ac6a-3cdb8082a16a)
       Test kiểm tra nếu giảng viên đăng ký khác khoa
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/b0e47638-6c14-45d3-a423-be8909ff17ce)
-    14. Tạo bảng dữ liệu “Lichday” lưu trữ danh mục lịch dạy học 
+	Sau khi đã có trgger để lọc dữ liệu đầu vào cho chuẩn xác thì em sẽ tự thêm dữ liệu để phù hợp .
+	![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/e6501e97-09f6-4fc5-b67b-2a22f891a954)
+    15. Tạo bảng dữ liệu “Lichday” lưu trữ danh mục lịch dạy học 
       Để tạo bảng chuột phải vào Table => New => Table => Ctrl + S để lưu và đặt tên
       ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/2ecf91a4-2d7e-4640-a0ae-bb8faa6355b3)
       -	Cột “id”  : đặt làm khóa chính (primary key) để id không phụ thuộc vào bất kỳ thông tin nào (ví dụ như thông tin giáo viên), điều này làm giảm rủi ro khi cần thay đổi thông tin , việc bảo trì và tính toàn vẹn dữ liệu.
@@ -114,9 +117,10 @@ Thông tin cụ thể các bảng như sau  :
       -	Cột “Phong” : để dữ liệu là ‘nvarchar(50)’ cho phép lưu trữ ký tự Unicode, thích hợp cho tên có các ký tự đặc biệt để dùng tiếng việt có dấu và cho phép lưu trữ đến 50 ký tự.
       -	Cột “Tiet”: để dữ liệu là int cho phép lưu trữ số nguyên.
       -	Cột “Ngay” : để dữ liệu là ‘date’ cho phép thao tác và truy vấn dữ liệu liên quan đến ngày tháng năm một cách dễ dàng và chính xác.
-    15. Thêm dữ liệu vào bảng Lichday
-     
-    Để thêm dữ liệu chuột phải vào bảng cần thêm => chọn “Edit Top 200 Rows” sau đó thêm các dữ liệu vào .
+    16. Thêm dữ liệu vào bảng Lichday
+        Để phù hợp với mô tả ở trên em đã viết thêm 1 trigger update_lichday để khi có sự chèn hay cập nhật trong bảng dangkyday khi giảng viên đăng ký môn thì bảng lịch học sẽ tự động cập nhật.
+        ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/01b1957a-d2eb-4a12-b8ad-14b47f92c62a)
+    
 
 
 
