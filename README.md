@@ -27,9 +27,8 @@ Thông tin cụ thể các bảng như sau  :
   #### II. Thiết kế bảng dữ liệu (Table)
   ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/79137894-853a-41a2-9fb2-cc038142c015)
   ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/24483a0a-492b-4ffc-a44b-3ede6224938a)
-  ![image](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/43ad8e8f-660e-425e-afd5-6948a99a99e8)
-  ![Screenshot 2024-06-18 114652](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/1479f233-3b07-48d5-80e7-f5378797b070)
-![Screenshot 2024-06-18 114637](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/18230e17-fbaf-4514-9e50-5da5ae01946c)
+ ![Screenshot 2024-06-18 114637](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/9fad9ddc-c271-45fb-8b88-4d379c19ef9b)
+![Screenshot 2024-06-18 114652](https://github.com/Binh269/Quan_ly_giang_vien_SQL/assets/147959501/9456f3df-4d39-406c-93a7-969bbeb06ba9)
 
 
      1. Tạo bảng dữ liệu “Khoa” lưu trữ danh mục khoa
